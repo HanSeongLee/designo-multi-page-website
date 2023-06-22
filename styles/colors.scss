@@ -1,0 +1,15 @@
+:root {
+  // Base Colors
+  --peach-color: #E7816B;
+  --light-peach-color: #FFAD9B;
+  --black-color: #1D1C1E;
+  --dark-grey-color: #333136;
+  --white-color: #FFFFFF;
+  --light-grey-color: #F1F3F5;
+
+  // Primary Colors
+  --primary-color: var(--peach-color);
+
+  // Secondary Colors
+  --secondary-color: var(--dark-grey-color);
+}
