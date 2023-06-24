@@ -1,0 +1,13 @@
+@import "styles/typography";
+
+.h1 {
+  @include H1;
+}
+
+.h2 {
+  @include H2;
+}
+
+.h3 {
+  @include H3;
+}

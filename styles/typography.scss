@@ -1,0 +1,33 @@
+@import "utils";
+
+//
+// Heading
+//
+
+@mixin Heading($size, $line-height, $letter-spacing) {
+  font-size: $size;
+  font-weight: 500;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin H1 {
+  @include Heading(32px, 36px, initial);
+
+  @include media(">tablet") {
+    @include Heading(48px, 48px, initial);
+  }
+}
+
+@mixin H2 {
+  @include Heading(28px, 36px, 1.4px);
+
+  @include media(">tablet") {
+    @include Heading(40px, 48px, 2px);
+  }
+}
+
+@mixin H3 {
+  @include Heading(20px, 26px, 5px);
+  text-transform: uppercase;
+}
