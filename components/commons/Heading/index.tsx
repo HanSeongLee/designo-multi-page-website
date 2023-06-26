@@ -2,10 +2,25 @@ import React, { ElementType } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
 
-interface IProps <T extends ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'> {
+export enum HeadingAs {
+    H1 = 'h1',
+    H2 = 'h2',
+    H3 = 'h3',
+    H4 = 'h4',
+    H5 = 'h5',
+    H6 = 'h6',
+}
+
+export enum HeadingType {
+    H1 = 'h1',
+    H2 = 'h2',
+    H3 = 'h3',
+}
+
+interface IProps <T extends ElementType = HeadingAs> {
     as: T;
     className?: string;
-    type: 'h1' | 'h2' | 'h3';
+    type: HeadingType;
 }
 
 const Heading: React.FC<IProps> = ({
@@ -16,9 +31,9 @@ const Heading: React.FC<IProps> = ({
         as,
         {
             className: cn(className, {
-                [styles.h1]: type === 'h1',
-                [styles.h2]: type === 'h2',
-                [styles.h3]: type === 'h3',
+                [styles.h1]: type === HeadingType.H1,
+                [styles.h2]: type === HeadingType.H2,
+                [styles.h3]: type === HeadingType.H3,
             }),
             ...props,
         },
