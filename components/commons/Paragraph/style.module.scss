@@ -1,0 +1,9 @@
+@import "styles/typography";
+
+.p1 {
+  @include P1;
+}
+
+.p2 {
+  @include P2;
+}

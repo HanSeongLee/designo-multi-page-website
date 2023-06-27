@@ -31,3 +31,24 @@
   @include Heading(20px, 26px, 5px);
   text-transform: uppercase;
 }
+
+//
+// Paragraph
+//
+
+@mixin Paragraph($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin P1 {
+  @include Paragraph(16px, 26px);
+}
+
+@mixin P2 {
+  @include Paragraph(15px, 25px);
+
+  @include media(">tablet") {
+    @include Paragraph(16px, 26px);
+  }
+}
