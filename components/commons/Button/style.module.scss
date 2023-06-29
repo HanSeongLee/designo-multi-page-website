@@ -1,0 +1,14 @@
+
+.button {
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.icon {
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+  }
+}
