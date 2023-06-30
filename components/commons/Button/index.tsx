@@ -4,6 +4,8 @@ import cn from 'classnames';
 import HamburgerIcon from 'public/icons/icon-hamburger.svg'
 
 export enum ButtonVariant {
+    Primary = 'primary',
+    Secondary = 'secondary',
     Icon = 'icon',
 }
 
@@ -14,7 +16,7 @@ export enum ButtonIcon {
 interface IProps<T extends ElementType = 'button' | 'a'> {
     as?: T;
     variant: ButtonVariant;
-    icon: ButtonIcon;
+    icon?: ButtonIcon;
     className?: string;
     href?: string;
     onClick?: () => void;
@@ -26,6 +28,8 @@ const Button: React.FC<IProps> = ({
                                   }) => {
     return React.createElement(as, {
         className: cn(styles.button, {
+            [styles.primary]: variant === ButtonVariant.Primary,
+            [styles.secondary]: variant === ButtonVariant.Secondary,
             [styles.icon]: variant === ButtonVariant.Icon,
         }, className),
         ...props,
