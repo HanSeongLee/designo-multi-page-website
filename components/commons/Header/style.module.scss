@@ -1,0 +1,12 @@
+
+.header {
+  display: flex;
+  height: 96px;
+  background: var(--white-color);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
