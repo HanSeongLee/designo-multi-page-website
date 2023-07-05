@@ -5,14 +5,8 @@ import Heading, { HeadingAs, HeadingType } from 'components/commons/Heading';
 import Link from 'next/link';
 import RightArrowIcon from '/public/icons/icon-right-arrow.svg';
 
-interface IProps extends HTMLAttributes<HTMLDivElement> {
-    thumbnail: {
-        mobile: string;
-        tablet: string;
-        desktop: string;
-    };
-    title: string;
-    path: string;
+interface IProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, IProject {
+
 }
 
 const ProjectCard: React.FC<IProps> = ({
