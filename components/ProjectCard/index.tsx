@@ -2,7 +2,6 @@ import React, { HTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
 import Heading, { HeadingAs, HeadingType } from 'components/commons/Heading';
-import Link from 'next/link';
 import RightArrowIcon from '/public/icons/icon-right-arrow.svg';
 
 interface IProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, IProject {
@@ -28,11 +27,9 @@ const ProjectCard: React.FC<IProps> = ({
             >
                 {title}
             </Heading>
-            <Link className={styles.link}
-                  href={path}
-            >
+            <p className={styles.link}>
                 View Projects <RightArrowIcon />
-            </Link>
+            </p>
         </article>
     );
 };
