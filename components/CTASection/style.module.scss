@@ -1,0 +1,18 @@
+
+.ctaSection {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 189px;
+    background: var(--black-color);
+    content: "";
+  }
+
+  .container {
+    position: relative;
+  }
+}
