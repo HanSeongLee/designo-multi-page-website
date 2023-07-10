@@ -2,6 +2,7 @@ import React, { ElementType } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
 import HamburgerIcon from 'public/icons/icon-hamburger.svg'
+import CloseIcon from 'public/icons/icon-close.svg'
 
 export enum ButtonVariant {
     Primary = 'primary',
@@ -11,6 +12,7 @@ export enum ButtonVariant {
 
 export enum ButtonIcon {
     Hamburger = 'hamburger',
+    Close = 'close',
 }
 
 interface IProps<T extends ElementType = 'button' | 'a'> {
@@ -35,6 +37,7 @@ const Button: React.FC<IProps> = ({
         ...props,
     }, variant === ButtonVariant.Icon ? (<>
         {icon === ButtonIcon.Hamburger && <HamburgerIcon />}
+        {icon === ButtonIcon.Close && <CloseIcon />}
     </>) : children);
 };
 

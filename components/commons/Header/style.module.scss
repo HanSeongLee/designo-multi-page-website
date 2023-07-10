@@ -1,12 +1,23 @@
 
 .header {
-  display: flex;
-  height: 96px;
-  background: var(--white-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  .headerWrapper {
+    position: relative;
+    display: flex;
+    height: 96px;
+    background: var(--white-color);
+    z-index: 10;
+  }
 
   .container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
   }
 }
