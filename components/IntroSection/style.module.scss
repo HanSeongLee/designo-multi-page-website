@@ -1,0 +1,14 @@
+
+.introBox {
+  background: url("/img/bg-pattern-intro-web.svg") no-repeat top right, var(--primary-color);
+  padding: 105px 0;
+
+  .title + .description {
+    margin-top: 24px;
+  }
+
+  .title, .description {
+    color: var(--white-color);
+    text-align: center;
+  }
+}
