@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import styles from './style.module.scss';
+import styles from 'components/ProjectSection/style.module.scss';
 import cn from 'classnames';
 import Container from 'components/commons/Container';
 import ProjectCard from 'components/ProjectCard';
