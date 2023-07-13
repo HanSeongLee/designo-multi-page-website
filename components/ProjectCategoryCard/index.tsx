@@ -4,16 +4,16 @@ import cn from 'classnames';
 import Heading, { HeadingAs, HeadingType } from 'components/commons/Heading';
 import RightArrowIcon from '/public/icons/icon-right-arrow.svg';
 
-interface IProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, IProject {
+interface IProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, IProjectCategory {
 
 }
 
-const ProjectCard: React.FC<IProps> = ({
+const ProjectCategoryCard: React.FC<IProps> = ({
                                            thumbnail, title, path, className,
                                            ...props
                                        }) => {
     return (
-        <article className={cn(styles.projectCard, className)}
+        <article className={cn(styles.projectCateogryCard, className)}
                  style={{
                      '--mobile-thumbnail': `url(${thumbnail.mobile})`,
                      '--tablet-thumbnail': `url(${thumbnail.tablet})`,
@@ -34,4 +34,4 @@ const ProjectCard: React.FC<IProps> = ({
     );
 };
 
-export default ProjectCard;
+export default ProjectCategoryCard;

@@ -1,25 +1,25 @@
 import React, { HTMLAttributes } from 'react';
-import styles from 'components/ProjectSection/style.module.scss';
+import styles from './style.module.scss';
 import cn from 'classnames';
 import Container from 'components/commons/Container';
-import ProjectCard from 'components/ProjectCard';
 import Link from 'next/link';
+import ProjectCategoryCard from 'components/ProjectCategoryCard';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
-    projects: IProject[];
+    categories: IProjectCategory[];
 }
 
-const ProjectSection: React.FC<IProps> = ({ projects, className, ...props }) => {
+const ProjectCategorySection: React.FC<IProps> = ({ categories, className, ...props }) => {
     return (
-        <section className={cn(styles.projectSection, className)}
+        <section className={cn(styles.projectCateogrySection, className)}
                  {...props}
         >
             <Container className={styles.container}>
-                {projects.map((project, index) => (
+                {categories.map((project, index) => (
                     <Link href={project.path}
                           key={index}
                     >
-                        <ProjectCard {...project} />
+                        <ProjectCategoryCard {...project} />
                     </Link>
                 ))}
             </Container>
@@ -27,4 +27,4 @@ const ProjectSection: React.FC<IProps> = ({ projects, className, ...props }) => 
     );
 };
 
-export default ProjectSection;
+export default ProjectCategorySection;

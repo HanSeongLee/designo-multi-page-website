@@ -2,11 +2,11 @@ import type { NextPage } from 'next'
 import styles from './style.module.scss';
 import Header from 'components/commons/Header';
 import HeroSection from 'components/home/HeroSection';
-import ProjectSection from 'components/ProjectSection';
+import ProjectCategorySection from 'components/ProjectCategorySection';
 import FeatureSection from 'components/home/FeatureSection';
 import Footer from 'components/commons/Footer';
 import CTASection from 'components/CTASection';
-import { allProjects } from 'data/projects';
+import { allProjectCategories } from 'data/projects';
 
 const Home: NextPage = () => {
     const features: IFeature[] = [
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             <Header />
             <main className={styles.main}>
                 <HeroSection />
-                <ProjectSection projects={allProjects} />
+                <ProjectCategorySection categories={allProjectCategories} />
                 <FeatureSection features={features} />
                 <CTASection />
             </main>

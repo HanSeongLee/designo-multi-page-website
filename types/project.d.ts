@@ -1,4 +1,4 @@
-interface IProject {
+interface IProjectCategory {
     thumbnail: {
         mobile: string;
         tablet: string;

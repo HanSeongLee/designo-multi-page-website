@@ -1,4 +1,4 @@
-export const allProjects: IProject[] = [
+export const allProjectCategories: IProjectCategory[] = [
     {
         thumbnail: {
             mobile: '/img/home/mobile/image-web-design.jpg',
