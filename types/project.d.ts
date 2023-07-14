@@ -7,3 +7,9 @@ interface IProjectCategory {
     title: string;
     path: string;
 }
+
+interface IProject {
+    thumbnail: string;
+    title: string;
+    description: string;
+}
