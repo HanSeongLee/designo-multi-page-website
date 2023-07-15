@@ -13,3 +13,7 @@ interface IProject {
     title: string;
     description: string;
 }
+
+interface IProjectWithHref extends IProject {
+    href: string;
+}
