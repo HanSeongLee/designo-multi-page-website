@@ -30,6 +30,7 @@ export const allProjectCategories: IProjectCategory[] = [
 
 export const allProjects: {
     webDesign: IProjectWithHref[];
+    appDesign: IProjectWithHref[];
 } = {
     webDesign: [
         {
@@ -66,6 +67,38 @@ export const allProjects: {
             thumbnail: '/img/projects/web-design/image-camp.jpg',
             title: 'Camp',
             description: 'Get expert training in coding, data, design, and digital marketing',
+            href: '#',
+        },
+    ],
+    appDesign: [
+        {
+            thumbnail: '/img/projects/app-design/image-airfilter.jpg',
+            title: 'Airfilter',
+            description: 'Solving the problem of poor indoor air quality by filtering the air',
+            href: '#',
+        },
+        {
+            thumbnail: '/img/projects/app-design/image-eyecam.jpg',
+            title: 'Eyecam',
+            description: 'Product that lets you edit your favorite photos and videos at any time',
+            href: '#',
+        },
+        {
+            thumbnail: '/img/projects/app-design/image-faceit.jpg',
+            title: 'Faceit',
+            description: 'Get to meet your favorite internet superstar with the faceit app',
+            href: '#',
+        },
+        {
+            thumbnail: '/img/projects/app-design/image-todo.jpg',
+            title: 'Todo',
+            description: 'A todo app that features cloud sync with light and dark mode',
+            href: '#',
+        },
+        {
+            thumbnail: '/img/projects/app-design/image-loopstudios.jpg',
+            title: 'Loopstudios',
+            description: 'A VR experience app made for Loopstudios',
             href: '#',
         },
     ],
