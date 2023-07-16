@@ -31,6 +31,7 @@ export const allProjectCategories: IProjectCategory[] = [
 export const allProjects: {
     webDesign: IProjectWithHref[];
     appDesign: IProjectWithHref[];
+    graphicDesign: IProjectWithHref[];
 } = {
     webDesign: [
         {
@@ -99,6 +100,26 @@ export const allProjects: {
             thumbnail: '/img/projects/app-design/image-loopstudios.jpg',
             title: 'Loopstudios',
             description: 'A VR experience app made for Loopstudios',
+            href: '#',
+        },
+    ],
+    graphicDesign: [
+        {
+            thumbnail: '/img/projects/graphic-design/image-change.jpg',
+            title: 'Tim Brown',
+            description: 'A book cover designed for Tim Brown’s new release, ‘Change’',
+            href: '#',
+        },
+        {
+            thumbnail: '/img/projects/graphic-design/image-boxed-water.jpg',
+            title: 'Boxed water',
+            description: 'A simple packaging concept made for Boxed Water',
+            href: '#',
+        },
+        {
+            thumbnail: '/img/projects/graphic-design/image-science.jpg',
+            title: 'Science!',
+            description: 'A poster made in collaboration with the Federal Art Project',
             href: '#',
         },
     ],
