@@ -5,6 +5,7 @@ interface IProjectCategory {
         desktop: string;
     };
     title: string;
+    description: string;
     path: string;
 }
 

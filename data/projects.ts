@@ -6,6 +6,7 @@ export const allProjectCategories: IProjectCategory[] = [
             desktop: '/img/home/desktop/image-web-design.jpg',
         },
         title: 'Web Design',
+        description: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
         path: '/projects/web-design',
     },
     {
@@ -15,6 +16,7 @@ export const allProjectCategories: IProjectCategory[] = [
             desktop: '/img/home/desktop/image-app-design.jpg',
         },
         title: 'App Design',
+        description: 'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.',
         path: '/projects/app-design',
     },
     {
@@ -24,16 +26,17 @@ export const allProjectCategories: IProjectCategory[] = [
             desktop: '/img/home/desktop/image-graphic-design.jpg',
         },
         title: 'Graphic Design',
+        description: 'We deliver eye-catching branding materials that are tailored to meet your business objectives.',
         path: '/projects/graphic-design',
     },
 ];
 
 export const allProjects: {
-    webDesign: IProjectWithHref[];
-    appDesign: IProjectWithHref[];
-    graphicDesign: IProjectWithHref[];
+    'web-design': IProjectWithHref[];
+    'app-design': IProjectWithHref[];
+    'graphic-design': IProjectWithHref[];
 } = {
-    webDesign: [
+    'web-design': [
         {
             thumbnail: '/img/projects/web-design/image-express.jpg',
             title: 'Express',
@@ -71,7 +74,7 @@ export const allProjects: {
             href: '#',
         },
     ],
-    appDesign: [
+    'app-design': [
         {
             thumbnail: '/img/projects/app-design/image-airfilter.jpg',
             title: 'Airfilter',
@@ -103,7 +106,7 @@ export const allProjects: {
             href: '#',
         },
     ],
-    graphicDesign: [
+    'graphic-design': [
         {
             thumbnail: '/img/projects/graphic-design/image-change.jpg',
             title: 'Tim Brown',
