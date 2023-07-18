@@ -1,0 +1,55 @@
+
+.card {
+  &.primary {
+    .body {
+      background: url("/img/about/mobile/bg-pattern-hero-about-mobile.svg") no-repeat, var(--primary-color);
+      background-size: 878px 946px;
+      background-position: right -140px;
+    }
+
+    .title {
+      color: var(--white-color);
+    }
+
+    .description {
+      color: var(--white-color);
+    }
+  }
+
+  &.secondary {
+    .body {
+      background: url("/img/bg-pattern-three-circles.svg") no-repeat, var(--lighten-peach-color);
+      background-size: 584px 584px;
+    }
+
+    .title {
+      color: var(--primary-color);
+    }
+
+    .description {
+      color: var(--secondary-color);
+    }
+  }
+
+  .thumbnail {
+    display: flex;
+    width: 100%;
+  }
+
+  .body {
+    padding: 80px 0;
+  }
+
+  .title + .description {
+    margin-top: 24px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    white-space: pre-line;
+  }
+}
