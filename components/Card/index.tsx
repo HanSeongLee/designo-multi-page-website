@@ -6,20 +6,29 @@ import Paragraph, { ParagraphType } from 'components/commons/Paragraph';
 import Container from 'components/commons/Container';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
-    variant?: 'primary' | 'secondary';
+    variant?: 'primary' | 'secondary' | 'location';
     thumbnail: string;
     title: string;
-    description: string;
+    description?: string;
+    location?: {
+        name: string;
+        address: string;
+        contact: {
+            phone: string;
+            email: string;
+        };
+    }
 }
 
 const Card: React.FC<IProps> = ({
                                     variant = 'primary', thumbnail, title, description,
-                                    className, ...props
+                                    location, className, ...props
                                 }) => {
     return (
         <article className={cn(styles.card, {
             [styles.primary]: variant === 'primary',
             [styles.secondary]: variant === 'secondary',
+            [styles.location]: variant === 'location',
         }, className)}
                  {...props}
         >
@@ -35,11 +44,30 @@ const Card: React.FC<IProps> = ({
                     >
                         {title}
                     </Heading>
-                    <Paragraph className={styles.description}
-                               type={ParagraphType.P2}
-                    >
-                        {description}
-                    </Paragraph>
+                    {description && (
+                        <Paragraph className={styles.description}
+                                   type={ParagraphType.P2}
+                        >
+                            {description}
+                        </Paragraph>
+                    )}
+                    {location && (
+                        <>
+                            <Paragraph className={styles.location}
+                                       type={ParagraphType.P2}
+                            >
+                                <strong>{location.name}</strong><br />
+                                {location.address}
+                            </Paragraph>
+                            <Paragraph className={styles.contact}
+                                       type={ParagraphType.P2}
+                            >
+                                <strong>Contact</strong><br />
+                                P : {location.contact.phone}<br/>
+                                M : {location.contact.email}
+                            </Paragraph>
+                        </>
+                    )}
                 </Container>
             </div>
         </article>

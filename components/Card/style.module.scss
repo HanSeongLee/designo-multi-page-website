@@ -16,7 +16,7 @@
     }
   }
 
-  &.secondary {
+  &.secondary, &.location {
     .body {
       background: url("/img/bg-pattern-three-circles.svg") no-repeat, var(--lighten-peach-color);
       background-size: 584px 584px;
@@ -40,16 +40,17 @@
     padding: 80px 0;
   }
 
-  .title + .description {
+  .title + .description,
+  .title + .location,
+  .location + .contact {
     margin-top: 24px;
   }
 
-  .title {
+  .title, .description, .location, .contact {
     text-align: center;
   }
 
-  .description {
-    text-align: center;
+  .description, .location {
     white-space: pre-line;
   }
 }
