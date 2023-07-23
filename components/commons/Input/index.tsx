@@ -12,10 +12,10 @@ const Input = React.forwardRef<HTMLInputElement, IProps>(({ error, className, ..
         <div className={cn(styles.inputWrapper, {
             [styles.error]: error,
         }, className)}
-             ref={ref}
         >
             <input className={styles.input}
                    {...props}
+                   ref={ref}
             />
             {error && (
                 <div className={styles.errorMessage}>
