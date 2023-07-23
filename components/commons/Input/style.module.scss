@@ -1,0 +1,50 @@
+@import "styles/typography";
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  &.error {
+    .errorMessage {
+      visibility: visible;
+    }
+  }
+
+  .input {
+    @include P1;
+
+    width: 100%;
+    font-weight: 500;
+    color: var(--white-color);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--white-color);
+    padding: 11px 14px;
+    outline: none;
+    margin-bottom: 2px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      border-bottom-width: 3px;
+      margin-bottom: 0;
+    }
+  }
+
+  .errorMessage {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 26px;
+    color: var(--white-color);
+    visibility: hidden;
+  }
+}
