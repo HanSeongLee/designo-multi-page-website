@@ -1,0 +1,48 @@
+@import "styles/typography";
+
+.textAreaWrapper {
+  position: relative;
+
+  &.error {
+    .errorMessage {
+      visibility: visible;
+    }
+  }
+
+  .textArea {
+    @include P1;
+
+    width: 100%;
+    min-height: 87px;
+    font-weight: 500;
+    color: var(--white-color);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--white-color);
+    resize: none;
+    outline: none;
+    padding: 11px 14px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      border-bottom-width: 3px;
+    }
+  }
+
+  .errorMessage {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 26px;
+    color: var(--white-color);
+    visibility: hidden;
+  }
+}
