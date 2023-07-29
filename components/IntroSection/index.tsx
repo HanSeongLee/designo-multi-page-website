@@ -10,7 +10,10 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     description: string;
 }
 
-const IntroBox: React.FC<IProps> = ({ title, description, className, ...props }) => {
+const IntroBox: React.FC<IProps> = ({
+                                        title, description, className, children,
+                                        ...props
+                                    }) => {
     return (
         <section className={cn(styles.introBox, className)}
                  {...props}
@@ -31,6 +34,7 @@ const IntroBox: React.FC<IProps> = ({ title, description, className, ...props })
                         {description}
                     </Paragraph>
                 )}
+                {children}
             </Container>
         </section>
     );
