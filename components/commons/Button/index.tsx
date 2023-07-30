@@ -22,7 +22,7 @@ interface IProps<T extends ElementType = 'button' | 'a'> {
     className?: string;
     href?: string;
     onClick?: () => void;
-    type: string;
+    type?: string;
 }
 
 const Button: React.FC<IProps> = ({
