@@ -1,8 +1,16 @@
+@import "styles/utils";
 
 .heroSection {
   height: 843px;
   background: var(--primary-color);
   overflow: hidden;
+
+  @include media(">tablet") {
+    width: 100%;
+    max-width: 689px;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
 
   .container {
     position: relative;
@@ -10,6 +18,10 @@
     height: 100%;
     color: var(--white-color);
     padding-top: 80px;
+
+    @include media(">tablet") {
+      padding-top: 60px;
+    }
 
     &::before {
       position: absolute;
@@ -20,6 +32,10 @@
       background: url("/img/home/bg-pattern-hero-home.svg") no-repeat;
       background-size: contain;
       content: "";
+
+      @include media(">tablet") {
+        right: -122px;
+      }
     }
 
     &::after {
@@ -32,9 +48,13 @@
       background-size: contain;
       transform: translateX(-50%);
       content: "";
+
+      @include media(">tablet") {
+        bottom: -362px;
+      }
     }
   }
-  
+
   .content {
     position: relative;
     display: flex;
@@ -46,9 +66,18 @@
 
   .title {
     margin-bottom: 14px;
+
+    @include media(">tablet") {
+      width: 573px;
+      margin-bottom: 24px;
+    }
   }
 
   .description {
     margin-bottom: 24px;
+
+    @include media(">tablet") {
+      max-width: 445px;
+    }
   }
 }
