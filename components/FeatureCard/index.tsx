@@ -22,17 +22,19 @@ const FeatureCard: React.FC<IProps> = ({
                      alt={''}
                 />
             </div>
-            <Heading className={styles.title}
-                     as={HeadingAs.H2}
-                     type={HeadingType.H3}
-            >
-                {title}
-            </Heading>
-            <Paragraph className={styles.description}
-                       type={ParagraphType.P1}
-            >
-                {description}
-            </Paragraph>
+            <div className={styles.content}>
+                <Heading className={styles.title}
+                         as={HeadingAs.H2}
+                         type={HeadingType.H3}
+                >
+                    {title}
+                </Heading>
+                <Paragraph className={styles.description}
+                           type={ParagraphType.P1}
+                >
+                    {description}
+                </Paragraph>
+            </div>
         </article>
     );
 };

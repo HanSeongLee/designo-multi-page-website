@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         {
             thumbnail: '/img/home/illustration-passionate.svg',
             title: 'Passionate',
-            description: 'GrEach project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.',
+            description: 'Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.',
         },
         {
             thumbnail: '/img/home/illustration-resourceful.svg',
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         {
             thumbnail: '/img/home/illustration-friendly.svg',
             title: 'Friendly',
-            description: ' We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.',
+            description: 'We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.',
         },
     ]
 
