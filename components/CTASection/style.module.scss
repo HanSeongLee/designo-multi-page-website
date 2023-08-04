@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .ctaSection {
   position: relative;
@@ -10,6 +11,10 @@
     height: 189px;
     background: var(--black-color);
     content: "";
+
+    @include media(">tablet") {
+      height: 86px;
+    }
   }
 
   .container {
