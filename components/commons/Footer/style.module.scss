@@ -1,7 +1,12 @@
+@import "styles/utils";
 
 .footer {
   background: var(--black-color);
   padding: 64px 0;
+
+  @include media(">tablet") {
+    padding: 80px 0;
+  }
 
   .container {
     display: flex;
@@ -9,21 +14,38 @@
     align-items: center;
   }
 
-  .divider {
+  .logoAndSitemap {
     width: 100%;
-    height: 1px;
-    background: var(--white-color);
-    opacity: 0.1;
-    border: none;
-    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    @include media(">tablet") {
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 40px;
+    }
   }
 
   .sitemapContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 32px;
     list-style: none;
     margin-bottom: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include media(">tablet") {
+      width: initial;
+      flex-direction: row;
+      border-top: none;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
 
     .linkItem {
       color: var(--white-color);
@@ -35,6 +57,17 @@
     }
   }
 
+  .infoAndSocial {
+
+    @include media(">tablet") {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 31px;
+    }
+  }
+
   .address {
     font-size: 16px;
     line-height: 26px;
@@ -43,6 +76,11 @@
     opacity: 0.5;
     margin-bottom: 40px;
     font-style: normal;
+
+    @include media(">tablet") {
+      text-align: left;
+      margin-bottom: 0;
+    }
   }
 
   .socialContainer {

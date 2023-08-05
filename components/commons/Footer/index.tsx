@@ -63,46 +63,49 @@ const Footer: React.FC<IProps> = ({ className, ...props }) => {
                 {...props}
         >
             <Container className={styles.container}>
-                <Logo />
-                <hr className={styles.divider} />
-                <ul className={styles.sitemapContainer}>
-                    {sitemap.map(({ name, link }, index) => (
-                        <li className={styles.linkItem}
-                            key={index}
-                        >
-                            <Link href={link}>
-                                {name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-
-                <address className={styles.address}>
-                    <strong>Designo Central Office</strong><br />
-                    3886 Wellington Street<br />
-                    Toronto, Ontario M9C 3J5<br />
-                </address>
-
-                <address className={styles.address}>
-                    <strong>Contact Us (Central Office)</strong><br />
-                    P : +1 253-863-8967<br />
-                    M : contact@designo.co<br />
-                </address>
-
-                <ul className={styles.socialContainer}>
-                    {socials.map(({ name, link, icon }, index) => (
-                        <li className={styles.socialItem}
-                            key={index}
-                            title={name}
-                        >
-                            <a href={link}
-                               target={'_blank'}
+                <div className={styles.logoAndSitemap}>
+                    <Logo />
+                    <ul className={styles.sitemapContainer}>
+                        {sitemap.map(({ name, link }, index) => (
+                            <li className={styles.linkItem}
+                                key={index}
                             >
-                                {icon}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                                <Link href={link}>
+                                    {name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className={styles.infoAndSocial}>
+                    <address className={styles.address}>
+                        <strong>Designo Central Office</strong><br />
+                        3886 Wellington Street<br />
+                        Toronto, Ontario M9C 3J5<br />
+                    </address>
+
+                    <address className={styles.address}>
+                        <strong>Contact Us (Central Office)</strong><br />
+                        P : +1 253-863-8967<br />
+                        M : contact@designo.co<br />
+                    </address>
+
+                    <ul className={styles.socialContainer}>
+                        {socials.map(({ name, link, icon }, index) => (
+                            <li className={styles.socialItem}
+                                key={index}
+                                title={name}
+                            >
+                                <a href={link}
+                                   target={'_blank'}
+                                >
+                                    {icon}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </Container>
         </footer>
     );
