@@ -1,7 +1,20 @@
+@import "styles/utils";
 
 .introBox {
+  display: flex;
+  align-items: center;
+  min-height: 320px;
   background: url("/img/bg-pattern-intro-web.svg") no-repeat top right, var(--primary-color);
-  padding: 105px 0;
+
+  @include media(">tablet") {
+    display: flex;
+    width: 100%;
+    max-width: 689px;
+    min-height: 252px;
+    background-position: 0 center;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
 
   .title + .description {
     margin-top: 24px;
@@ -10,5 +23,9 @@
   .title, .description {
     color: var(--white-color);
     text-align: center;
+
+    @include media(">tablet") {
+      white-space: pre-line;
+    }
   }
 }
