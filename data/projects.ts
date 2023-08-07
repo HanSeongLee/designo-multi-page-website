@@ -6,7 +6,7 @@ export const allProjectCategories: IProjectCategory[] = [
             desktop: '/img/home/desktop/image-web-design.jpg',
         },
         title: 'Web Design',
-        description: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
+        description: 'We build websites that serve as powerful marketing tools \nand bring memorable brand experiences.',
         path: '/projects/web-design',
     },
     {
@@ -16,7 +16,7 @@ export const allProjectCategories: IProjectCategory[] = [
             desktop: '/img/home/desktop/image-app-design.jpg',
         },
         title: 'App Design',
-        description: 'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.',
+        description: 'Our mobile designs bring intuitive digital solutions \nto your customers right at their fingertips.',
         path: '/projects/app-design',
     },
     {
@@ -26,7 +26,7 @@ export const allProjectCategories: IProjectCategory[] = [
             desktop: '/img/home/desktop/image-graphic-design.jpg',
         },
         title: 'Graphic Design',
-        description: 'We deliver eye-catching branding materials that are tailored to meet your business objectives.',
+        description: 'We deliver eye-catching branding materials that are \ntailored to meet your business objectives.',
         path: '/projects/graphic-design',
     },
 ];

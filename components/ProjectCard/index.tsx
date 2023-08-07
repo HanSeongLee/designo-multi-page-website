@@ -16,10 +16,12 @@ const ProjectCard: React.FC<IProps> = ({
         <article className={cn(styles.projectCard, className)}
                  {...props}
         >
-            <img className={styles.thumbnail}
-                 src={thumbnail}
-                 alt={''}
-            />
+            <div className={styles.thumbnailWrapper}>
+                <img className={styles.thumbnail}
+                     src={thumbnail}
+                     alt={''}
+                />
+            </div>
             <div className={styles.content}>
                 <Heading className={styles.title}
                          as={HeadingAs.H2}
