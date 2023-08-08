@@ -14,7 +14,11 @@ const LocationPage: NextPage = () => {
                 <section className={styles.locationSection}>
                     <Card id={'canada'}
                           variant={'location'}
-                          thumbnail={'/img/locations/desktop/image-map-canada.png'}
+                          thumbnail={{
+                              mobile: '/img/locations/desktop/image-map-canada.png',
+                              tablet: '/img/locations/tablet/image-map-canada.png',
+                              desktop: '/img/locations/desktop/image-map-canada.png',
+                          }}
                           title={'Canada'}
                           location={{
                               name: 'Designo Central Office',
@@ -27,7 +31,11 @@ const LocationPage: NextPage = () => {
                     />
                     <Card id={'australia'}
                           variant={'location'}
-                          thumbnail={'/img/locations/desktop/image-map-australia.png'}
+                          thumbnail={{
+                              mobile: '/img/locations/desktop/image-map-australia.png',
+                              tablet: '/img/locations/tablet/image-map-australia.png',
+                              desktop: '/img/locations/desktop/image-map-australia.png',
+                          }}
                           title={'Australia'}
                           location={{
                               name: 'Designo AU Office',
@@ -40,7 +48,11 @@ const LocationPage: NextPage = () => {
                     />
                     <Card id={'united-kingdom'}
                           variant={'location'}
-                          thumbnail={'/img/locations/desktop/image-map-united-kingdom.png'}
+                          thumbnail={{
+                              mobile: '/img/locations/desktop/image-map-united-kingdom.png',
+                              tablet: '/img/locations/tablet/image-map-uk.png',
+                              desktop: '/img/locations/desktop/image-map-united-kingdom.png',
+                          }}
                           title={'United Kingdom'}
                           location={{
                               name: 'Designo UK Office',

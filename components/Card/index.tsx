@@ -7,7 +7,11 @@ import Container from 'components/commons/Container';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
     variant?: 'primary' | 'secondary' | 'location';
-    thumbnail: string;
+    thumbnail: {
+        mobile: string;
+        tablet: string;
+        desktop: string;
+    } | string;
     title: string;
     description?: string;
     location?: {
@@ -32,10 +36,30 @@ const Card: React.FC<IProps> = ({
         }, className)}
                  {...props}
         >
-            <img className={styles.thumbnail}
-                 src={thumbnail}
-                 alt={''}
-            />
+            {thumbnail && typeof thumbnail === 'string' && (
+                <img className={styles.thumbnail}
+                     src={thumbnail}
+                     alt={''}
+                />
+            )}
+            {thumbnail && typeof thumbnail === 'object' && (
+                <picture>
+                    <source media={'(min-width: 768px)'}
+                            srcSet={thumbnail.tablet}
+                    />
+                    <source media={'(min-width: 1339px)'}
+                            srcSet={thumbnail.desktop}
+                    />
+                    <source media={'(max-width: 768px)'}
+                            srcSet={thumbnail.mobile}
+                    />
+
+                    <img className={styles.thumbnail}
+                         src={thumbnail.desktop}
+                         alt={''}
+                    />
+                </picture>
+            )}
             <div className={styles.body}>
                 <Container>
                     <Heading className={styles.title}
@@ -44,30 +68,32 @@ const Card: React.FC<IProps> = ({
                     >
                         {title}
                     </Heading>
-                    {description && (
-                        <Paragraph className={styles.description}
-                                   type={ParagraphType.P2}
-                        >
-                            {description}
-                        </Paragraph>
-                    )}
-                    {location && (
-                        <>
-                            <Paragraph className={styles.location}
+                    <div className={styles.content}>
+                        {description && (
+                            <Paragraph className={styles.description}
                                        type={ParagraphType.P2}
                             >
-                                <strong>{location.name}</strong><br />
-                                {location.address}
+                                {description}
                             </Paragraph>
-                            <Paragraph className={styles.contact}
-                                       type={ParagraphType.P2}
-                            >
-                                <strong>Contact</strong><br />
-                                P : {location.contact.phone}<br/>
-                                M : {location.contact.email}
-                            </Paragraph>
-                        </>
-                    )}
+                        )}
+                        {location && (
+                            <>
+                                <Paragraph className={styles.location}
+                                           type={ParagraphType.P2}
+                                >
+                                    <strong>{location.name}</strong><br />
+                                    {location.address}
+                                </Paragraph>
+                                <Paragraph className={styles.contact}
+                                           type={ParagraphType.P2}
+                                >
+                                    <strong>Contact</strong><br />
+                                    P : {location.contact.phone}<br />
+                                    M : {location.contact.email}
+                                </Paragraph>
+                            </>
+                        )}
+                    </div>
                 </Container>
             </div>
         </article>

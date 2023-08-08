@@ -1,6 +1,16 @@
+@import "styles/utils";
 
 .main {
   display: flex;
   flex-direction: column;
   gap: 120px;
+
+  .cardContainer {
+
+    @include media(">tablet") {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+    }
+  }
 }

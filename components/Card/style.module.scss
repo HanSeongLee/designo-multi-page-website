@@ -1,10 +1,28 @@
+@import "styles/typography";
+@import "styles/utils";
 
 .card {
+
+  @include media(">tablet") {
+    width: 100%;
+    max-width: 689px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
   &.primary {
     .body {
       background: url("/img/about/mobile/bg-pattern-hero-about-mobile.svg") no-repeat, var(--primary-color);
       background-size: 878px 946px;
       background-position: right -140px;
+
+      @include media(">tablet") {
+        background: url("/img/about/desktop/bg-pattern-hero-about-desktop.svg") no-repeat, var(--primary-color);
+        background-size: 640px 640px;
+        background-position: -115px -438px;
+        padding: 64px 58px;
+      }
     }
 
     .title {
@@ -17,13 +35,24 @@
   }
 
   &.secondary, &.location {
+
     .body {
       background: url("/img/bg-pattern-three-circles.svg") no-repeat, var(--lighten-peach-color);
       background-size: 584px 584px;
+
+      @include media(">tablet") {
+        min-height: 416px;
+        background-position: 94px -212px;
+        padding: 68px 58px;
+      }
     }
 
     .title {
       color: var(--primary-color);
+
+      @include media(">tablet") {
+        @include H2;
+      }
     }
 
     .description {
@@ -31,23 +60,78 @@
     }
   }
 
+  &.location {
+
+    @include media(">tablet") {
+      display: flex;
+      flex-direction: column;
+      gap: 31px;
+    }
+
+    .thumbnail {
+
+      @include media(">tablet") {
+        height: 326px;
+        border-radius: 15px;
+      }
+    }
+
+    .body {
+
+      @include media(">tablet") {
+        min-height: 326px;
+        background: url("/img/bg-pattern-two-circles.svg") no-repeat, var(--lighten-peach-color);
+        background-position: left bottom;
+        border-radius: 15px;
+        padding: 88px 75px;
+      }
+    }
+
+    .content {
+
+      @include media(">tablet") {
+        display: flex;
+        gap: 30px;
+      }
+    }
+  }
+
   .thumbnail {
     display: flex;
     width: 100%;
+    object-fit: cover;
+
+    @include media(">tablet") {
+      height: 320px;
+    }
   }
 
   .body {
     padding: 80px 0;
   }
 
-  .title + .description,
-  .title + .location,
+  .title + .content {
+    margin-top: 24px;
+  }
+
   .location + .contact {
     margin-top: 24px;
+
+    @include media(">tablet") {
+      margin-top: 0;
+    }
   }
 
   .title, .description, .location, .contact {
     text-align: center;
+  }
+
+  .title, .location, .contact {
+
+    @include media(">tablet") {
+      flex: 1;
+      text-align: left;
+    }
   }
 
   .description, .location {
