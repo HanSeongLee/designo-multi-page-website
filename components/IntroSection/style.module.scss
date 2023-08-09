@@ -16,6 +16,26 @@
     margin: 0 auto;
   }
 
+  &.small {
+
+  }
+
+  &.large {
+    background: url("/img/contact/mobile/bg-pattern-hero-contact-mobile.svg") no-repeat var(--primary-color);
+    background-position: -30px 0;
+    padding: 72px 0;
+
+    @include media(">tablet") {
+      background: url("/img/contact/desktop/bg-pattern-hero-desktop.svg") no-repeat var(--primary-color);
+        background-position: -122px -83px;
+      padding: 71px 58px;
+
+      .title, .description {
+        text-align: left;
+      }
+    }
+  }
+
   .title + .description {
     margin-top: 24px;
   }

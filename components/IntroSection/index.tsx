@@ -8,14 +8,18 @@ import Paragraph, { ParagraphType } from 'components/commons/Paragraph';
 interface IProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     description: string;
+    size?: 'small' | 'large';
 }
 
 const IntroBox: React.FC<IProps> = ({
-                                        title, description, className, children,
-                                        ...props
+                                        title, description, size = 'small', className,
+                                        children, ...props
                                     }) => {
     return (
-        <section className={cn(styles.introBox, className)}
+        <section className={cn(styles.introBox, {
+            [styles.small]: size === 'small',
+            [styles.large]: size === 'large',
+        }, className)}
                  {...props}
         >
             <Container>
