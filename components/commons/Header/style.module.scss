@@ -11,6 +11,7 @@
   }
 
   .headerWrapper {
+    position: relative;
     display: flex;
     height: 96px;
     background: var(--white-color);
@@ -36,6 +37,21 @@
   }
 
   .menuButton {
+
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: none;
+
+    @include media(">tablet") {
+      display: flex;
+    }
+  }
+
+  .mobileMenu {
 
     @include media(">tablet") {
       display: none;

@@ -47,7 +47,9 @@ const Header: React.FC<IProps> = ({ className, ...props }) => {
                     <div className={styles.wrapper}>
                         <Logo dark />
 
-                        <Menu open={menuOpen} />
+                        <Menu className={styles.menu}
+                              open={menuOpen}
+                        />
                     </div>
 
                     <Button className={styles.menuButton}
@@ -58,6 +60,9 @@ const Header: React.FC<IProps> = ({ className, ...props }) => {
                 </Container>
             </div>
 
+            <Menu className={styles.mobileMenu}
+                  open={menuOpen}
+            />
         </header>
     );
 };
