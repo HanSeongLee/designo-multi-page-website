@@ -12,6 +12,11 @@
     margin: 0 auto;
   }
 
+  @include media(">desktop") {
+    max-width: 1110px;
+    height: 640px;
+  }
+
   .container {
     position: relative;
     width: 100%;
@@ -21,6 +26,12 @@
 
     @include media(">tablet") {
       padding-top: 60px;
+    }
+
+    @include media(">desktop") {
+      display: flex;
+      padding-top: 0;
+      align-items: center;
     }
 
     &::before {
@@ -35,6 +46,11 @@
 
       @include media(">tablet") {
         right: -122px;
+      }
+
+      @include media(">desktop") {
+        top: 0;
+        right: 0;
       }
     }
 
@@ -52,6 +68,13 @@
       @include media(">tablet") {
         bottom: -362px;
       }
+
+      @include media(">desktop") {
+        left: initial;
+        right: -75px;
+        bottom: -242px;
+        transform: initial;
+      }
     }
   }
 
@@ -62,6 +85,12 @@
     align-items: center;
     text-align: center;
     z-index: 10;
+
+    @include media(">desktop") {
+      align-items: initial;
+      text-align: left;
+      padding-left: 95px;
+    }
   }
 
   .title {
@@ -78,6 +107,7 @@
 
     @include media(">tablet") {
       max-width: 445px;
+      margin-bottom: 40px;
     }
   }
 }
