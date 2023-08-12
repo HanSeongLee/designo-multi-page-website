@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .button {
   display: flex;
@@ -15,6 +16,15 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 8px;
+
+    @include media(">desktop") {
+      transition: color 0.3s, background 0.3s;
+
+      &:hover {
+        color: var(--white-color);
+        background: var(--light-peach-color);
+      }
+    }
   }
 
   &.primary {
