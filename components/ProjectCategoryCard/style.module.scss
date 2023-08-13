@@ -18,6 +18,24 @@
     background-size: cover;
   }
 
+  @include media(">desktop") {
+    min-height: 308px;
+    height: 100%;
+    background: var(--desktop-thumbnail) no-repeat;
+    background-size: cover;
+
+    &:before {
+      transition: background 0.3s, opacity 0.3s;
+    }
+
+    &:hover {
+      &:before {
+        background: var(--primary-color);
+        opacity: 0.8;
+      }
+    }
+  }
+
   &::before {
     position: absolute;
     top: 0;
