@@ -11,6 +11,12 @@
     gap: 48px;
   }
 
+  @include media(">desktop") {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
   .illustrationWrapper {
     position: relative;
     width: 202px;
@@ -39,6 +45,10 @@
     @include media(">tablet") {
       padding-top: 41px;
     }
+
+    @include media(">desktop") {
+      padding-top: 0;
+    }
   }
 
   .title, .description {
@@ -47,6 +57,10 @@
     @include media(">tablet") {
       text-align: left;
     }
+
+    @include media(">desktop") {
+      text-align: center;
+    }
   }
 
   .title {
@@ -54,6 +68,10 @@
 
     @include media(">tablet") {
       margin-bottom: 16px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 32px;
     }
   }
 }
