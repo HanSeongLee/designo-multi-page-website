@@ -16,6 +16,13 @@
     padding: 57px 58px 59px
   }
 
+  @include media(">desktop") {
+    flex-direction: row;
+    justify-content: space-between;
+    background-position: right center;
+    padding: 72px 96px 72px 95px;
+  }
+
   .title {
     color: var(--white-color);
     text-align: center;
@@ -26,6 +33,10 @@
 
       max-width: 335px;
     }
+
+    @include media(">desktop") {
+      text-align: left;
+    }
   }
 
   .description {
@@ -35,6 +46,11 @@
 
     @include media(">tablet") {
       max-width: 440px;
+    }
+
+    @include media(">desktop") {
+      text-align: left;
+      margin-bottom: 0;
     }
   }
 }

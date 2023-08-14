@@ -20,17 +20,19 @@ const CTABox: React.FC<IProp> = ({
         <div className={cn(styles.ctaBox, className)}
              {...props}
         >
-            <Heading className={styles.title}
-                     as={HeadingAs.H2}
-                     type={HeadingType.H1}
-            >
-                {title}
-            </Heading>
-            <Paragraph className={styles.description}
-                       type={ParagraphType.P2}
-            >
-                {description}
-            </Paragraph>
+            <div>
+                <Heading className={styles.title}
+                         as={HeadingAs.H2}
+                         type={HeadingType.H1}
+                >
+                    {title}
+                </Heading>
+                <Paragraph className={styles.description}
+                           type={ParagraphType.P2}
+                >
+                    {description}
+                </Paragraph>
+            </div>
             <Button as={'a'}
                     href={link}
                     variant={ButtonVariant.Secondary}
