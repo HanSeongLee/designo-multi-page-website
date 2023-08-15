@@ -16,6 +16,11 @@
     margin: 0 auto;
   }
 
+  @include media(">desktop") {
+    max-width: 1110px;
+    background-position: right center;
+  }
+
   &.small {
 
   }
