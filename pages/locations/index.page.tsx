@@ -45,6 +45,7 @@ const LocationPage: NextPage = () => {
                                   email: 'contact@designo.au',
                               }
                           }}
+                          reverse
                     />
                     <Card id={'united-kingdom'}
                           variant={'location'}

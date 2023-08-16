@@ -1,12 +1,21 @@
+@import "styles/utils";
 
 .main {
   display: flex;
   flex-direction: column;
   gap: 120px;
 
+  @include media(">desktop") {
+    gap: 160px;
+  }
+
   .locationSection {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include media(">desktop") {
+      gap: 32px;
+    }
   }
 }

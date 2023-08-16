@@ -5,12 +5,63 @@
   flex-direction: column;
   gap: 120px;
 
+  @include media(">desktop") {
+    gap: 160px;
+  }
+
   .cardContainer {
 
     @include media(">tablet") {
       display: flex;
       flex-direction: column;
       gap: 120px;
+    }
+
+    @include media(">desktop") {
+      position: relative;
+      max-width: 1110px;
+      margin: 0 auto;
+
+      &::before {
+        position: absolute;
+        top: 285px;
+        left: -165px;
+        width: 1006px;
+        height: 594px;
+        background: url("/img/bg-pattern-leaf.svg") no-repeat;
+        content: "";
+      }
+
+      & > * {
+        position: relative;
+      }
+    }
+  }
+
+  .bottomSection {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    @include media(">desktop") {
+      position: relative;
+      max-width: 1110px;
+      gap: 160px;
+      margin: 0 auto;
+
+      &::before {
+        position: absolute;
+        top: 182px;
+        right: -560px;
+        width: 1006px;
+        height: 594px;
+        background: url("/img/bg-pattern-leaf.svg") no-repeat;
+        content: "";
+      }
+
+      & > * {
+        position: relative;
+      }
     }
   }
 }

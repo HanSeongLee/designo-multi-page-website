@@ -21,18 +21,20 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
             phone: string;
             email: string;
         };
-    }
+    },
+    reverse?: boolean;
 }
 
 const Card: React.FC<IProps> = ({
                                     variant = 'primary', thumbnail, title, description,
-                                    location, className, ...props
+                                    location, reverse, className, ...props
                                 }) => {
     return (
         <article className={cn(styles.card, {
             [styles.primary]: variant === 'primary',
             [styles.secondary]: variant === 'secondary',
             [styles.location]: variant === 'location',
+            [styles.reverse]: reverse,
         }, className)}
                  {...props}
         >
@@ -44,11 +46,11 @@ const Card: React.FC<IProps> = ({
             )}
             {thumbnail && typeof thumbnail === 'object' && (
                 <picture>
-                    <source media={'(min-width: 768px)'}
-                            srcSet={thumbnail.tablet}
-                    />
                     <source media={'(min-width: 1339px)'}
                             srcSet={thumbnail.desktop}
+                    />
+                    <source media={'(min-width: 768px)'}
+                            srcSet={thumbnail.tablet}
                     />
                     <source media={'(max-width: 768px)'}
                             srcSet={thumbnail.mobile}

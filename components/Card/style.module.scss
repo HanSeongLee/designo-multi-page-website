@@ -11,6 +11,17 @@
     overflow: hidden;
   }
 
+  @include media(">desktop") {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1110px;
+    min-height: 480px;
+
+    &:nth-child(even) {
+      flex-direction: row;
+    }
+  }
+
   &.primary {
     .body {
       background: url("/img/about/mobile/bg-pattern-hero-about-mobile.svg") no-repeat, var(--primary-color);
@@ -22,6 +33,10 @@
         background-size: 640px 640px;
         background-position: -115px -438px;
         padding: 64px 58px;
+      }
+
+      @include media(">desktop") {
+        background-position: right bottom;
       }
     }
 
@@ -45,6 +60,11 @@
         background-position: 94px -212px;
         padding: 68px 58px;
       }
+
+      @include media(">desktop") {
+        background: url("/img/bg-pattern-two-circles.svg") no-repeat, var(--lighten-peach-color);
+        background-position: left bottom;
+      }
     }
 
     .title {
@@ -60,6 +80,17 @@
     }
   }
 
+  &.primary, &.secondary {
+
+    .body {
+      @include media(">desktop") {
+        display: flex;
+        align-items: center;
+        padding: 0 82px 0 96px;
+      }
+    }
+  }
+
   &.location {
 
     @include media(">tablet") {
@@ -68,11 +99,22 @@
       gap: 31px;
     }
 
+    @include media(">desktop") {
+      flex-direction: row-reverse;
+      min-height: initial;
+      height: 326px;
+      gap: 30px;
+    }
+
     .thumbnail {
 
       @include media(">tablet") {
         height: 326px;
         border-radius: 15px;
+      }
+
+      @include media(">desktop") {
+        width: 350px;
       }
     }
 
@@ -85,6 +127,12 @@
         border-radius: 15px;
         padding: 88px 75px;
       }
+
+      @include media(">desktop") {
+        width: 100%;
+        height: 326px;
+        padding: 88px 95px;
+      }
     }
 
     .content {
@@ -96,6 +144,19 @@
     }
   }
 
+  &.reverse {
+
+    @include media(">desktop") {
+      flex-direction: row;
+
+      &.secondary {
+        .body {
+          background-position: -146px bottom;
+        }
+      }
+    }
+  }
+
   .thumbnail {
     display: flex;
     width: 100%;
@@ -103,6 +164,11 @@
 
     @include media(">tablet") {
       height: 320px;
+    }
+
+    @include media(">desktop") {
+      width: 476px;
+      height: 100%;
     }
   }
 
@@ -124,6 +190,10 @@
 
   .title, .description, .location, .contact {
     text-align: center;
+
+    @include media(">desktop") {
+      text-align: left;
+    }
   }
 
   .title, .location, .contact {
