@@ -22,22 +22,24 @@ const IntroBox: React.FC<IProps> = ({
         }, className)}
                  {...props}
         >
-            <Container>
-                {title && (
-                    <Heading className={styles.title}
-                             as={HeadingAs.H2}
-                             type={HeadingType.H1}
-                    >
-                        {title}
-                    </Heading>
-                )}
-                {description && (
-                    <Paragraph className={styles.description}
-                               type={ParagraphType.P2}
-                    >
-                        {description}
-                    </Paragraph>
-                )}
+            <Container className={styles.container}>
+                <div className={styles.descriptor}>
+                    {title && (
+                        <Heading className={styles.title}
+                                 as={HeadingAs.H2}
+                                 type={HeadingType.H1}
+                        >
+                            {title}
+                        </Heading>
+                    )}
+                    {description && (
+                        <Paragraph className={styles.description}
+                                   type={ParagraphType.P2}
+                        >
+                            {description}
+                        </Paragraph>
+                    )}
+                </div>
                 {children}
             </Container>
         </section>

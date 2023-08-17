@@ -32,11 +32,38 @@
 
     @include media(">tablet") {
       background: url("/img/contact/desktop/bg-pattern-hero-desktop.svg") no-repeat var(--primary-color);
-        background-position: -122px -83px;
+      background-position: -122px -83px;
       padding: 71px 58px;
 
       .title, .description {
         text-align: left;
+      }
+    }
+
+    @include media(">desktop") {
+      height: 480px;
+      background-position: left bottom;
+      padding: 55px 0 54px;
+    }
+
+    .container {
+
+      @include media(">desktop") {
+        max-width: 920px;
+        display: flex;
+        gap: 96px;
+      }
+
+      & > * {
+        flex: 1;
+      }
+    }
+
+    .descriptor {
+
+      @include media(">desktop") {
+        min-width: 445px;
+        padding-top: 100px;
       }
     }
   }
