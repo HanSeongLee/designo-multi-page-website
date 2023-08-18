@@ -6,7 +6,37 @@
   gap: 120px;
   padding-bottom: 120px;
 
+  @include media(">desktop") {
+    position: relative;
+    max-width: 1110px;
+    gap: 160px;
+    padding-bottom: 160px;
+    margin: 0 auto;
+
+    &::before {
+      position: absolute;
+      bottom: -160px;
+      right: -165px;
+      width: 1006px;
+      height: 594px;
+      background: url("/img/bg-pattern-leaf.svg") no-repeat;
+      content: "";
+    }
+
+    & > * {
+      position: relative;
+    }
+  }
+
   .contactFormContainer {
     padding-top: 37px;
+
+    @include media(">desktop") {
+      padding-top: 0;
+    }
   }
+}
+
+.footer {
+  position: relative;
 }

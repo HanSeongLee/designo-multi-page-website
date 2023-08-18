@@ -20,7 +20,7 @@ const ContactPage: NextPage = () => {
                 </IntroSection>
                 <LocationSection />
             </main>
-            <Footer />
+            <Footer className={styles.footer} />
         </>
     );
 };
