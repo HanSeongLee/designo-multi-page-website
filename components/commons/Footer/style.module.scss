@@ -54,6 +54,15 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       text-align: center;
+
+      a {
+
+        @include media(">desktop") {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 
@@ -88,5 +97,20 @@
     gap: 16px;
     align-items: center;
     list-style: none;
+
+    a {
+
+      @include media(">desktop") {
+        svg path {
+          transition: fill 0.3s;
+        }
+
+        &:hover {
+          svg path {
+            fill: var(--light-peach-color);
+          }
+        }
+      }
+    }
   }
 }
