@@ -20,11 +20,15 @@ const ContactForm: React.FC<IProps> = ({ form, className, ...props }) => {
               {...props}
         >
             <Input placeholder={'Name'}
+                   type={'text'}
+                   autoComplete={'name'}
                    error={errors.name?.message}
                    {...register('name', { required: ERROR_MESSAGES.FIELD_REQUIRED })}
             />
             <Input placeholder={'Email Address'}
                    error={errors.email?.message}
+                   type={'email'}
+                   autoComplete={'email'}
                    {...register('email', {
                        required: ERROR_MESSAGES.FIELD_REQUIRED,
                        pattern: {
@@ -35,6 +39,8 @@ const ContactForm: React.FC<IProps> = ({ form, className, ...props }) => {
             />
             <Input placeholder={'Phone'}
                    error={errors.phone?.message}
+                   type={'tel'}
+                   autoComplete={'tel'}
                    {...register('phone', {
                        required: ERROR_MESSAGES.FIELD_REQUIRED,
                        pattern: {
